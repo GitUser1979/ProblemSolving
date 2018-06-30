@@ -101,32 +101,35 @@ namespace MeanMeadianMode
             return mode;
             }
 
-        static void Main (String[] args)
-            {
-            //input the sample size
-            int n = Convert.ToInt32(Console.ReadLine());
+        //Client code for testing. 
+        //Uncomment the following main method to test and run.
 
-            //input the sample as integer array (space separated integers)
-            string inputNumbers = Console.ReadLine();
-            string[] arryOfStrings = inputNumbers.Split(null);
-            int[] numArray = new int[n];
-            int i = 0;
+        //static void Main (String[] args)
+        //    {
+        //    //input the sample size
+        //    int n = Convert.ToInt32(Console.ReadLine());
 
-            foreach ( var item in arryOfStrings )
-                {
-                numArray[i] = Convert.ToInt32(item);
-                ++i;
-                }
+        //    //input the sample as integer array (space separated integers)
+        //    string inputNumbers = Console.ReadLine();
+        //    string[] arryOfStrings = inputNumbers.Split(null);
+        //    int[] numArray = new int[n];
+        //    int i = 0;
 
-            double mean = Solution.CalculateMean(numArray, n);
-            Console.WriteLine(mean);
+        //    foreach ( var item in arryOfStrings )
+        //        {
+        //        numArray[i] = Convert.ToInt32(item);
+        //        ++i;
+        //        }
 
-            double median = Solution.CalculateMedian(numArray, n);
-            Console.WriteLine(median);
+        //    double mean = Solution.CalculateMean(numArray, n);
+        //    Console.WriteLine(mean);
 
-            int mode = Solution.CalculateMode(numArray, n);
-            Console.WriteLine(mode);
-            }
+        //    double median = Solution.CalculateMedian(numArray, n);
+        //    Console.WriteLine(median);
+
+        //    int mode = Solution.CalculateMode(numArray, n);
+        //    Console.WriteLine(mode);
+        //    }
         }
     }
 
