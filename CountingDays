@@ -1,0 +1,40 @@
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string date1, date2;
+    date1 = "11-01-2019";
+    date2 = "20-11-2019";
+    vector<char> v1(date1.begin(), date1.end());
+    vector<char> v2(date2.begin(), date2.end());
+
+    //If both days fall in same month
+    int d1 = v1[0] - '0';
+    int d2 = v1[1] - '0';
+    int date1Int = d1 * 10 + d2;
+        
+    int d3 = v2[0] - '0';
+    int d4 = v2[1] - '0';
+    int date2Int = d3 * 10 + d4;
+
+    int numOfDays = date2Int - date1Int;
+
+    //If both days fall in different month
+    int m1 = v1[3] - '0';
+    int m2 = v1[4] - '0';
+    int m3 = v2[3] - '0';
+    int m4 = v2[4] - '0';
+    int month1Int = m1 * 10 + m2;
+    int month2Int = m3 * 10 + m4;
+    int numOfMonths = month2Int - month1Int;
+
+    //Assuming 30 days in all months
+    int totalNumDays = numOfDays + numOfMonths * 30;
+
+
+    cout << totalNumDays << "\n";
+}
