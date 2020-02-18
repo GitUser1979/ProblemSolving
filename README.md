@@ -1,2 +1,2 @@
 # ProblemSolving
-This contains C# source code for some of the mathematical problems.
+This contains source code (C++, C#) for some of the general competitive problems.
